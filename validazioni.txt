@@ -1,0 +1,43 @@
+accepted: Il campo deve essere accettato (checkbox spuntata, "si", "1", "true").
+active_url: Il campo deve essere un URL valido.
+after:date: Il campo deve essere una data successiva alla data specificata.
+after_or_equal:date: Il campo deve essere una data uguale o successiva alla data specificata.
+alpha: Il campo deve contenere solo lettere.
+alpha_dash: Il campo deve contenere solo lettere, numeri, trattini e underscore.
+alpha_num: Il campo deve contenere solo lettere e numeri.
+array: Il campo deve essere un array
+before:date: Il campo deve essere una data precendente alla data specificata
+before_or_equal:date: Il campo deve essere una data precendente alla data specificata.
+between:min,max: La lunghezza, il numero o la dimensione del campo deve essere tra min e max.
+boolean: Il campo deve essere una data valida
+confirmed: Il campo deve avere un campo di conferma corrispondente (es. passoword_confirmation per password)
+date: Il campo deve essere una data valida
+date_equals:date: Il campo deve essere una data uguale alla data specificata
+date_format:format: Il campo deve avere un formato di data specifico
+different:field: Il campo deve essere diverso dall'altro campo specificato
+digits_value: Il campo deve essere un numero di value cifre 
+digits_between:min,max: Il campo deve essere un numero tra min e max cifre
+email: Il campo deve essere un indirizzo email valido
+exist: table, column: Il campo deve esistere nella colonna specificata della tabella specificata
+file: Il campo deve essere un file caricato con successo
+filled: Il campo deve avere un valore
+image: Il campo deve essere un' immagine (jpeg, png, bmp, gif, svg, webp).
+in:foo,bar,...: Il campo deve essere uno dei valori specificati.
+integer: Il campo deve essere un numero intero
+ip: il campo deve essere un indizzo ip valido 
+json: il campo deve essere una stringa JSON valida.
+max:value: La lunghezza, il numero o la dimensione del campo non deve essere maggiore di value
+mimes:types: Il campo deve essere un file di uno dei tipi specificati
+min:value: La lunghezza, il numero o la dimensione del campo non deve essere maggiore di value
+nullable: Il campo può essere vuoto (null)
+numeric: Il campo deve essere un numero
+regex:pattern: Il campo deve corrispondendere al pattern regex specificato
+required: Il campo è obbligatorio
+required_if:anotherfiled,value: Il campo è obbligatorio se l'altro campo ha il valore specificato
+same:field: Il campo deve corrispondendere al valore dell'altro campo specificato
+size:value: La lunghezza, il numero o la dimensione del campo deve essere di value.
+string: Il campo deve essere una zona valida
+timezone: Il campo deve essere una zona valida
+unique: table,column: Il campo deve essere unico nella tabella/colonna specificata
+url: Il campo deve essere un URL valido
+uuid: Il campo deve essere un UUID valido. 

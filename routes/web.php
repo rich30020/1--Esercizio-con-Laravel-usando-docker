@@ -7,20 +7,22 @@ use Illuminate\Support\Facades\Route;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\ValidationController;
+use App\Http\Controllers\UserController;
+use App\Http\Middleware\AddCustomHeader;
 
 Route::get('/', function () {
-    return view('form', [
+    return view('home', [
         'pageTitle' => 'Homepage',
         'metaTitle' => 'Homepage nel meta title'
     ]);
-})->name('home');
+})->name('home')->middleware(AddCustomHeader::class . ':abbiamoquasifinito');
 
 Route::get('/about', function () {
     return view('about', [
         'pageTitle' => 'About',
         'metaTitle' => 'About nel meta title'
     ]);
-});
+})->middleware('auth');
 
 // Rotte spostate nel PostController per una migliore organizzazione
 Route::controller(PostController::class)->group(function () {
@@ -31,6 +33,29 @@ Route::controller(PostController::class)->group(function () {
 
 
 Route::post('/form', [ValidationController::class, 'validateForm'])->name('validateForm');
+
+
+// _________________________________________________________________________________
+
+// Route per la registrazione
+Route::get('/register', [UserController::class, 'showRegistrationForm'])->name('showRegisterForm');
+Route::post('/register', [UserController::class, 'register'])->name('registerUser');
+
+// Route per il login
+Route::get('/login', [UserController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [UserController::class, 'login'])->name('loginUser');
+
+//Route per il logout
+Route::post('/logout', [UserController::class, 'logout'])->name('logoutUser');
+
+
+
+
+
+
+
+
+
 
 /*
 Route::get('/esempio', function () {
