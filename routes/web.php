@@ -9,8 +9,20 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\ValidationController;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\AddCustomHeader;
+use App\Jobs\SimpleJob;
 
 Route::get('/', function () {
+
+
+    /* $job = new SimpleJob('bello il corso, spetta che metto like e mi iscrivo pure');
+    $job->handle(); */
+
+    SimpleJob::dispatch('sono un job rich');
+    //SimpleJob::dispatch('sono un job delay')->onQueue('high');
+
+
+
+
     return view('home', [
         'pageTitle' => 'Homepage',
         'metaTitle' => 'Homepage nel meta title'
